@@ -10,8 +10,34 @@ Highlights:
 - Browser reuse: works with the user's current Chrome/Edge profile and login state.
 - Agent-friendly: Claude Code, Cursor, Codex, and any agent that can run HTTP or shell commands can use it.
 - Fully open source: Go daemon, TypeScript extension, agent skill package, and website are auditable.
-
 ![Chrome Bridge architecture](docs/arch.png)
+
+## Installation
+
+1. install  
+macOS / Linux:
+
+```bash
+curl -fsSL https://github.com/zhaocore/chrome-bridge/raw/refs/heads/master/install.sh | bash
+```
+
+Windows PowerShell:
+
+```powershell
+irm https://github.com/zhaocore/chrome-bridge/raw/refs/heads/master/install.ps1 | iex
+```
+
+2. install the browser extension:
+
+[Chrome Web Store - ChromeBridge](https://chromewebstore.google.com/detail/chromebridge/banojplagbjebdnnmklagfagbepelcha)
+
+Verify the connection:
+
+```bash
+~/.chrome-bridge/bin/chrome-bridge status
+```
+
+It is ready when `running: true` and `extension_connected: true` are shown.
 
 ## Use Cases
 
@@ -47,31 +73,7 @@ Default listen address: `127.0.0.1:10089`
 
 The extension uses `chrome.debugger` to call Chrome DevTools Protocol. It inherits the current browser's login state, cookies, and extension configuration. Connect it only to a trusted local daemon.
 
-## Installation
 
-macOS / Linux:
-
-```bash
-curl -fsSL https://github.com/zhaocore/chrome-bridge/raw/refs/heads/master/install.sh | bash
-```
-
-Windows PowerShell:
-
-```powershell
-irm https://github.com/zhaocore/chrome-bridge/raw/refs/heads/master/install.ps1 | iex
-```
-
-Then install the browser extension:
-
-[Chrome Web Store - ChromeBridge](https://chromewebstore.google.com/detail/chromebridge/banojplagbjebdnnmklagfagbepelcha)
-
-Verify the connection:
-
-```bash
-~/.chrome-bridge/bin/chrome-bridge status
-```
-
-It is ready when `running: true` and `extension_connected: true` are shown.
 
 ## Commands
 
