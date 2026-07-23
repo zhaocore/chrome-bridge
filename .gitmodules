@@ -1,0 +1,15 @@
+[submodule "chrome-bridge-api"]
+	path = chrome-bridge-api
+	url = https://github.com/zhaocore/chrome-bridge-api.git
+
+[submodule "chrome-bridge-plugin"]
+	path = chrome-bridge-plugin
+	url = https://github.com/zhaocore/chrome-bridge-plugin.git
+
+[submodule "chrome-bridge-skill"]
+	path = chrome-bridge-skill
+	url = https://github.com/zhaocore/chrome-bridge-skill.git
+
+[submodule "chrome-bridge-web"]
+	path = chrome-bridge-web
+	url = https://github.com/zhaocore/chrome-bridge-web.git
